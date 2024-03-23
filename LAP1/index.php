@@ -1,3 +1,5 @@
+/* This HTML code represents a student results rating form. Here's a breakdown of what each section
+does: */
 <!DOCTYPE html>
 <html>
 
@@ -6,18 +8,15 @@
     <!-- Unicode Vietnamese -->
     <meta charset="UTF-8">
     <meta name="author" content=" trendemy.com" />
-    <!-- css definition file -->
+    <!-- CSS definition file -->
     <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
     <div id="wrapper">
         <h2> CLASSIFICATION OF STUDENT RESULTS</h2>
-        <!-- Form to send processing results -->
-        <!-- action is the landing page, the # value is sent to the
-
-current page itself.
-The method is post. -->
+        <!-- Form for sending processing results -->
+        <!-- The action attribute is set to '#' which sends the form to the current page. The method is set to post. -->
         <form action="#" method="post">
             <!-- Mathematics -->
             <div class="row">
@@ -25,17 +24,9 @@ The method is post. -->
                     <label> Math scores </label>
                 </div>
                 <div class="lblinput">
-                    <!-- name="math" is the variable name sent to the
-
-server,
-
-isset($_POST['math']) check if the variable is defined
-
-or not -->
-
-                    <input type="number" name="math" value="<?php echo isset($_POST['math']) ?
-
-                                                                $_POST['math'] : ""; ?>" />
+                    <!-- The 'name' attribute is set to 'math' which is the variable name sent to the server.
+                         The value attribute is populated with PHP to retain the submitted value upon form submission. -->
+                    <input type="number" name="math" value="<?php echo isset($_POST['math']) ? $_POST['math'] : ""; ?>" />
                 </div>
             </div>
 
@@ -45,10 +36,8 @@ or not -->
                     <label> Physics scores</label>
                 </div>
                 <div class="lblinput">
-                    <input type="number" name="physics" value="<?php echo isset($_POST['physics']) ?
-
-                                                                    $_POST['physics'] : ""; ?>" />
-
+                    <!-- Similar to Math input, but for Physics. -->
+                    <input type="number" name="physics" value="<?php echo isset($_POST['physics']) ? $_POST['physics'] : ""; ?>" />
                 </div>
             </div>
             <!-- Chemistry -->
@@ -57,10 +46,8 @@ or not -->
                     <label> Chemistry scores</label>
                 </div>
                 <div class="lblinput">
-                    <input type="number" name="chemistry" value="<?php echo isset($_POST['chemistry']) ?
-
-                                                                        $_POST['chemistry'] : ""; ?>" />
-
+                    <!-- Similar to Math input, but for Chemistry. -->
+                    <input type="number" name="chemistry" value="<?php echo isset($_POST['chemistry']) ? $_POST['chemistry'] : ""; ?>" />
                 </div>
             </div>
             <div class="row">
@@ -69,6 +56,7 @@ or not -->
                 </div>
                 <div class="lblinput">
                     <select name="khuvuc">
+                        <!-- Options for selecting an area, PHP is used to retain the submitted value upon form submission. -->
                         <option value="0" selected>-- Select an area --</option>
                         <option value="1" <?php echo $_POST['area'] == 1 ? "selected" : "" ?>>Area 1</option>
                         <option value="2" <?php echo $_POST['area'] == 2 ? "selected" : "" ?>>Area 2</option>
@@ -79,11 +67,10 @@ or not -->
                 </div>
             </div>
 
-            <!-- Form send button, command button to send results -->
+            <!-- Submit button to send results -->
             <div class="row">
                 <div class="submit">
                     <input type="submit" name="btnsubmit" value="Ratings" />
-
                 </div>
             </div>
         </form>
@@ -96,10 +83,8 @@ or not -->
                 <label>Total points</label>
             </div>
             <div class="lbloutput">
-                <?php echo isset($_POST['btnsubmit']) ? $_POST['math']
-
-                    + $_POST['physics'] + $_POST['chemistry'] : ""; ?>
-
+                <!-- PHP is used to calculate and display total points upon form submission. -->
+                <?php echo isset($_POST['btnsubmit']) ? ($_POST['math'] + $_POST['physics'] + $_POST['chemistry']) : ""; ?>
             </div>
         </div>
     </div>
@@ -109,28 +94,25 @@ or not -->
         </div>
         <div class="lbloutput">
             <?php
-
+            // PHP is used to calculate and display the rating based on total points.
             if (isset($_POST['btnsubmit'])) {
-                $totalpoints = $_POST['math'] + $_POST['physics']
-
-                    + $_POST['chemistry'];
-
+                $totalpoints = $_POST['math'] + $_POST['physics'] + $_POST['chemistry'];
                 if ($totalpoints >= 24) echo "Very Good";
                 elseif ($totalpoints >= 21) echo "Good";
                 elseif ($totalpoints >= 15) echo "Average";
                 else echo "Weak";
             }
             ?>
-
         </div>
     </div>
-    <!-- UNDER RATING -->
+    <!-- Display priority points -->
     <div class="row">
         <div class="lbltitle">
             <label for="">Priority point</label>
         </div>
         <div class="lbloutput">
             <?php
+            // PHP is used to calculate and display priority points based on the selected area.
             if (isset($_POST["btnsubmit"])) {
                 $prioritypoint_points = $_POST["area"];
                 switch ($prioritypoint_points) {

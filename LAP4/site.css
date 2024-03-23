@@ -1,9 +1,16 @@
+/* The provided CSS code snippet contains various styling rules for different elements in a web page.
+Here is a breakdown of what each part of the code is doing: */
+/* Setting the default font family for the entire document */
 html {
   font-family: sans-serif;
 }
+
+/* Removing default margin for the body */
 body {
   margin: 0px;
 }
+
+/* Setting margins for heading elements */
 h1,
 h2,
 h3,
@@ -12,41 +19,58 @@ h5,
 h6 {
   margin: 25px 0 15px 0;
 }
+
+/* Styling for h2 elements */
 h2 {
-  font-size: 17px;
-  font-weight: bold;
-}
-#wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
-.row {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 5px;
-}
-.header {
-  color: green;
-  text-transform: uppercase;
-}
-.lbltitle {
-  width: 20%;
-  float: left;
-}
-.lblinput,
-.lbloutput {
-  width: 80%;
-  float: left;
-}
-.submit {
-  width: 50%;
-  float: left;
-}
-input,
-textarea {
-  width: 300px;
+  font-size: 17px; /* Setting font size */
+  font-weight: bold; /* Making it bold */
 }
 
+/* Styling for the wrapper element */
+#wrapper {
+  width: 80%; /* Setting width to 80% of its containing element */
+  margin: 0 auto; /* Centering the wrapper horizontally */
+}
+
+/* Styling for rows */
+.row {
+  width: 100%; /* Setting width to 100% */
+  display: inline-block; /* Displaying as inline-block */
+  margin-bottom: 5px; /* Setting bottom margin */
+}
+
+/* Styling for header class */
+.header {
+  color: green; /* Setting text color to green */
+  text-transform: uppercase; /* Transforming text to uppercase */
+}
+
+/* Styling for title labels */
+.lbltitle {
+  width: 20%; /* Setting width to 20% */
+  float: left; /* Floating left */
+}
+
+/* Styling for input and output labels */
+.lblinput,
+.lbloutput {
+  width: 80%; /* Setting width to 80% */
+  float: left; /* Floating left */
+}
+
+/* Styling for submit buttons */
+.submit {
+  width: 50%; /* Setting width to 50% */
+  float: left; /* Floating left */
+}
+
+/* Styling for input and textarea elements */
+input,
+textarea {
+  width: 300px; /* Setting width to 300px */
+}
+
+/* Styling for button elements */
 button {
-  width: 307px;
+  width: 307px; /* Setting width to 307px */
 }

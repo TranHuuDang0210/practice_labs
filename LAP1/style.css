@@ -1,41 +1,55 @@
+/* The CSS code provided is setting styles for various elements in an HTML document. Here is a
+breakdown of what each section is doing: */
+/* Setting the default font family for the entire HTML document */
 html {
   font-family: sans-serif;
 }
+
+/* Removing default margin from the body */
 body {
   margin: 0px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+/* Setting margins for headings */
+h1, h2, h3, h4, h5, h6 {
   margin: 25px 0 15px 0;
 }
+
+/* Styling for h2 elements */
 h2 {
-  font-size: 17px;
-  font-weight: bold;
+  font-size: 17px; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
 }
+
+/* Wrapper element styling */
 #wrapper {
-  width: 80%;
-  margin: 0 auto;
+  width: 80%; /* Setting width */
+  margin: 0 auto; /* Centering the wrapper horizontally */
 }
+
+/* Styling for rows */
 .row {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 5px;
+  width: 100%; /* Setting width to 100% */
+  display: inline-block; /* Displaying as inline block */
+  margin-bottom: 5px; /* Setting margin bottom */
 }
+
+/* Styling for labels */
 .lbltitle {
-  width: 20%;
-  float: left;
+  width: 20%; /* Setting width */
+  float: left; /* Floating left for label positioning */
 }
+
+/* Styling for input/output elements */
 .lblinput,
 .lbloutput {
-  width: 80%;
-  float: left;
+  width: 80%; /* Setting width */
+  float: left; /* Floating left */
 }
+
+/* Styling for submit button */
 .submit {
-  padding: 10px 0;
-  text-align: center;
-  width: 50%;
+  padding: 10px 0; /* Setting padding */
+  text-align: center; /* Aligning text to center */
+  width: 50%; /* Setting width */
 }
